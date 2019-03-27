@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+/* Utilities  */
+
+/* Header  */
+
+/* header {
+} */
+
+header .header_title {
+  font-family: "Germania One", cursive;
+  font-size: 5rem;
+  text-align: center;
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+header .header_title img {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 6%;
+}
+
+header .header_subtitle {
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* Navbar  */
+
+.navbar {
+  background: #eeeded;
+}
+
+.navbar .items {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.navbar .items a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar .items li:hover {
+  background: #cccccc;
+  flex-grow: .5;
+  text-align: center;
+}
