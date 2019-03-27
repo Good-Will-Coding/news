@@ -12,9 +12,6 @@ body {
 
 /* Header  */
 
-/* header {
-} */
-
 header .header_title {
   font-family: "Germania One", cursive;
   font-size: 5rem;
@@ -58,6 +55,35 @@ header .header_subtitle {
 
 .navbar .items li:hover {
   background: #cccccc;
-  flex-grow: .5;
+  flex-grow: 0.5;
   text-align: center;
+}
+
+/* Footer  */
+
+footer {
+  display: flex;
+  background: rgb(223, 220, 220);
+  font-weight: 300;
+  padding: 0.8rem auto;
+}
+
+.footer_section {
+  color: black;
+  font-size: 1rem;
+  
+}
+
+.footer_section .footer_title {
+  font-family: "Germania One", cursive;
+  font-size: 1.4rem;
+  padding-left: 1rem;
+}
+
+.footer_section a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: rgb(63, 61, 61);
+  font-weight: 300;
+  padding-left: 1rem;
 }
