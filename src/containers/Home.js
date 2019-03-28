@@ -1,31 +1,34 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
-import BreakingNews from "../components/BreakingNews";
-import { getBreakingNews } from "../actions/index";
+import TopNews from "../components/TopNews";
+import { getBreakingNews, getEditorsPicks } from "../actions/index";
+import EditorPicks from "../components/EditorPicks";
 
 function Home(props) {
-
   useEffect(() => {
     props.getBreakingNews();
+    props.getEditorsPicks();
   }, []);
 
+  const { latest, chosenArticles} = props.getNews;
   return (
     <div>
-      <BreakingNews />
+      <TopNews latest={latest} />
+      <EditorPicks editorPicks={chosenArticles} />
     </div>
   );
 }
 
 const mapStateToProps = state => {
-    console.log(state)
-  const { breakingNews } = state;
+  const { getNews } = state;
   return {
-    breakingNews
+    getNews
   };
 };
 
 const mapDispatchToProps = {
-  getBreakingNews
+  getBreakingNews,
+  getEditorsPicks
 };
 
 export default connect(

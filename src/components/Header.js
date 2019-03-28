@@ -11,11 +11,11 @@ function Header() {
     <nav className="navbar">
         <ul className="items">
             <li><Link to="/trending">Trending Now</Link></li>
-            <li><Link>Entertaintment</Link></li>
-            <li><Link>World News</Link></li>
-            <li><Link>Sports</Link></li>
-            <li><Link>Travel</Link></li>
-            <li><Link>Business</Link></li>
+            <li><Link to="/entertainment">Entertaintment</Link></li>
+            <li><Link to="/worldnews">World News</Link></li>
+            <li><Link to="/sports">Sports</Link></li>
+            <li><Link to="/travel">Travel</Link></li>
+            <li><Link to="/business">Business</Link></li>
         </ul>
     </nav>
     </div>
