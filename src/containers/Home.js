@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import BreakingNews from "../components/BreakingNews";
-import { getBreakingNews } from '../actions/index';
-
+import { getBreakingNews } from "../actions/index";
 
 function Home() {
+    
+  useEffect(() => {
+    getBreakingNews();
+  }, []);
+
   return (
     <div>
       <BreakingNews />
