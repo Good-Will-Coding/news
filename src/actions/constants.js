@@ -1,0 +1,1 @@
+export const GET_BREAKINGNEWS = 'GET_BREAKINGNEWS';

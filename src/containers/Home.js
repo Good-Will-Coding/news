@@ -1,11 +1,29 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import BreakingNews from "../components/BreakingNews";
+import { getBreakingNews } from '../actions/index';
+
 
 function Home() {
   return (
     <div>
-        Home
+      <BreakingNews />
     </div>
-  )
+  );
 }
 
-export default Home;
+const mapStateToProps = state => {
+  const { articles } = state;
+  return {
+    articles
+  };
+};
+
+const mapDispatchToProps = {
+  getBreakingNews
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Home);
