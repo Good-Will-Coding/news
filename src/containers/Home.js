@@ -3,10 +3,10 @@ import { connect } from "react-redux";
 import BreakingNews from "../components/BreakingNews";
 import { getBreakingNews } from "../actions/index";
 
-function Home() {
-    
+function Home(props) {
+
   useEffect(() => {
-    getBreakingNews();
+    props.getBreakingNews();
   }, []);
 
   return (
@@ -17,9 +17,10 @@ function Home() {
 }
 
 const mapStateToProps = state => {
-  const { articles } = state;
+    console.log(state)
+  const { breakingNews } = state;
   return {
-    articles
+    breakingNews
   };
 };
 
