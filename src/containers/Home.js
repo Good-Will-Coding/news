@@ -1,23 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import TopNews from "../components/TopNews";
 import {
   getBreakingNews,
   getEditorsPicks,
-  getNewsWatch
+  getNewsWatch,
+  getHealthSection
 } from "../actions/index";
 import EditorPicks from "../components/EditorPicks";
 import NewsWatch from "../components/NewsWatch";
 import SectionTitle from "../components/SectionTitle";
+import HealthSection from "../components/HealthSection";
 
 function Home(props) {
   useEffect(() => {
     props.getBreakingNews();
     props.getEditorsPicks();
     props.getNewsWatch();
+    props.getHealthSection();
   }, []);
 
-  const { latest, chosenArticles, newsWatch } = props.getNews;
+  const { latest, chosenArticles, newsWatch, healthSection } = props.getNews;
   return (
     <div>
       <TopNews latest={latest} />
@@ -26,11 +29,14 @@ function Home(props) {
           <SectionTitle title="Editor's Picks" />
           <EditorPicks editorPicks={chosenArticles} />
         </div>
+
         <div className="right">
           <SectionTitle title="Brexit Watch" />
           <NewsWatch newsWatch={newsWatch} />
         </div>
       </div>
+      <SectionTitle title="Health" />
+      <HealthSection articles={healthSection} />
     </div>
   );
 }
@@ -45,7 +51,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
   getBreakingNews,
   getEditorsPicks,
-  getNewsWatch
+  getNewsWatch,
+  getHealthSection
 };
 
 export default connect(

@@ -1,7 +1,8 @@
 import {
   GET_BREAKINGNEWS,
   GET_EDITORSPICKS,
-  GET_NEWSWATCH
+  GET_NEWSWATCH,
+  GET_HEALTHSECTION
 } from "../actions/constants";
 
 export default function(state = {}, action) {
@@ -13,6 +14,9 @@ export default function(state = {}, action) {
     }
     case GET_NEWSWATCH: {
       return { ...state, newsWatch: action.payload };
+    }
+    case GET_HEALTHSECTION: {
+      return { ...state, healthSection: action.payload };
     }
     default:
       return state;

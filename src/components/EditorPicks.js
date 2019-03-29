@@ -6,7 +6,7 @@ const EditorPicks = ({ editorPicks }) => {
     if (editorPicks) {
       return editorPicks.articles.map(item => {
         return (
-          <div className="editors-card">
+          <div className="editors-card" key={item.name}>
             <Link
               className="editors-card-content"
               style={{ background: `url(${item.urlToImage})` }}

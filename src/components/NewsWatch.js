@@ -6,7 +6,7 @@ const NewsWatch = ({ newsWatch }) => {
     if (newsWatch) {
       return newsWatch.articles.map(item => {
         return (
-          <div className="newswatch-card">
+          <div key={item.name} className="newswatch-card">
             <Link
               className="newswatch-card-content"
               style={{ background: `url(${item.urlToImage})` }}
