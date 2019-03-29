@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function TopNews({ latest }) {
-  console.log(latest);
   const showTopNews = () => {
     if (latest) {
       return latest.articles.map(item => {
